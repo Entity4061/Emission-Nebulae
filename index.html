@@ -83,8 +83,9 @@
             const distance = Math.random() * 200;
             const height = (Math.random() - 0.5) * 200;
 
-            positions[i * 3] = distance * Math.cos(angle);
-            positions[i * 3 + 1] = height;
+            // Adjust positions to create a shape similar to the Omega Nebula
+            positions[i * 3] = distance * Math.cos(angle) * 0.5;
+            positions[i * 3 + 1] = height * 0.5;
             positions[i * 3 + 2] = distance * Math.sin(angle);
 
             const ratio = i / particleCount;
