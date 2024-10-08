@@ -63,6 +63,7 @@
         const colors = new Float32Array(particleCount * 3);
         const sizes = new Float32Array(particleCount);
 
+        // Define color stops based on the provided image
         const colorStops = [
             new THREE.Color(0xff0000), // Red
             new THREE.Color(0xff7f00), // Orange
@@ -83,7 +84,7 @@
             const distance = Math.random() * 200;
             const height = (Math.random() - 0.5) * 200;
 
-            // Adjust positions to create a shape similar to the Omega Nebula
+            // Adjust positions to create a shape similar to the provided nebula image
             positions[i * 3] = distance * Math.cos(angle) * 0.5;
             positions[i * 3 + 1] = height * 0.5;
             positions[i * 3 + 2] = distance * Math.sin(angle);
